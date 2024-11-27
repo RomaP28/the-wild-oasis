@@ -1,9 +1,6 @@
-
-markdown
-Копировать код
 # The Wild Oasis 🌴
 
-Welcome to **The Wild Oasis**! This is a modern, full-stack web application designed to showcase a seamless user experience with powerful tools and clean design. The project is built using cutting-edge technologies like **Vite**, **React**, **Styled Components**, and **Supabase**.
+Welcome to **The Wild Oasis**! This is a small boutique hotel with 8 luxurious wooden cabins. Custom-built application to manage everything about the hotel: **bookings**, **cabins** and **guests**. The project is built using cutting-edge technologies like **Vite**, **React**, **Styled Components**, and **Supabase**.
 
 ## Features
 - **Fast Development with Vite**: Leverage blazing-fast builds and hot module replacement.
@@ -47,7 +44,9 @@ Follow these steps to download and run the project locally:
    VITE_SUPABASE_URL=your-supabase-url
    VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
       
-2. **Run the Development Servers**
+4. **Run the Development Servers**
    ```bash
    npm install
-      
+         
+5. **Open the App**
+   Open your browser and navigate to [http://localhost:5173](http://localhost:5173)
