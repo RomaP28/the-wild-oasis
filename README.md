@@ -3,12 +3,12 @@
 Welcome to **The Wild Oasis**! This is a small boutique hotel with 8 luxurious wooden cabins. Custom-built application to manage everything about the hotel: **bookings**, **cabins** and **guests**. The project is built using cutting-edge technologies like **Vite**, **React**, **Styled Components**, and **Supabase**.
 
 ## Features
-- **Fast Development with Vite**: Leverage blazing-fast builds and hot module replacement.
+- **Vite Development**: Leveraging blazing-fast builds and hot module replacement.
 - **Component Styling with Styled Components**: Keep styles scoped to components for maintainable and reusable code.
-- **Client-Side Routing**: Built with React Router for smooth navigation.
-- **Data Management with React Query**: Fetch, cache, and synchronize server state with ease.
+- **Data Prefetching with React Router**: Efficiently prefetching data for improved navigation and performance.
+- **Data Management with React Query**: Fetching, caching, and synchronize server state.
 - **Forms Simplified**: React Hook Forms ensures efficient and user-friendly form management.
-- **Supabase Integration**: Handle authentication, database, and backend logic effortlessly.
+- **Supabase Integration**: Handle authentication, database, and all backend logic.
 
 ## Technologies Used
 - [Vite](https://vitejs.dev/)
