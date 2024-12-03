@@ -5,17 +5,22 @@ import {useSearchParams} from "react-router-dom";
 export function useBookings() {
 	const [searchParams] = useSearchParams();
 	
+	//Filter
 	const filterValue = searchParams.get('status');
 	const filter = !filterValue || filterValue === 'all' ? null : { field: 'status', value: filterValue };
 	
+	//Sort
 	const sortByRaw = searchParams.get('sortBy') || 'startDate-desc';
 	const [field, direction] = sortByRaw.split('-');
 	const sortBy = {field, direction};
 	
-	const {isLoading, error, data: bookings} = useQuery({
-		queryKey: ['bookings', filter, sortBy],
-		queryFn: () => getBookings({ filter }),
+	//Paginate
+	const page = !searchParams.get('page') ? 1 : Number(searchParams.get('page'));
+	
+	const {isLoading, data: {count, data: bookings} = {}, error } = useQuery({
+		queryKey: ['bookings', filter, sortBy, page],
+		queryFn: () => getBookings({ filter, sortBy, page }),
 	})
 	// console.log(bookings)
-	return { isLoading, error, bookings };
+	return { isLoading, error, bookings, count };
 }
