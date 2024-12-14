@@ -11,7 +11,7 @@ import Menus from "../../ui/Menus.jsx";
 import {useNavigate} from "react-router-dom";
 import Modal from "../../ui/Modal.jsx";
 import ConfirmDelete from "../../ui/ConfirmDelete.jsx";
-import {useDeleteBooking} from "./useDeleteBooking.js";
+import {useDeleteBookings} from "./useDeleteBookings.js";
 
 const Cabin = styled.div`
   font-size: 1.6rem;
@@ -56,7 +56,7 @@ function BookingRow({
 }) {
   const navigate = useNavigate();
   
-  const { isDeleting, deleteBooking } = useDeleteBooking();
+  const { isDeleting, deleteBooking } = useDeleteBookings();
   
   const statusToTagName = {
     unconfirmed: "blue",
