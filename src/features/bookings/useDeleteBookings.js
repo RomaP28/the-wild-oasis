@@ -19,4 +19,4 @@ export function useDeleteBookings() {
 	})
 	
 	return { isDeleting, deleteBooking };
-}``
+}
