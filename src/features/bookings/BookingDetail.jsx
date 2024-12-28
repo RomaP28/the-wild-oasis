@@ -15,6 +15,7 @@ import {useNavigate} from "react-router-dom";
 import Modal from "../../ui/Modal.jsx";
 import ConfirmDelete from "../../ui/ConfirmDelete.jsx";
 import {useDeleteBookings} from "./useDeleteBookings.js";
+import Empty from "../../ui/Empty.jsx";
 
 const HeadingGroup = styled.div`
   display: flex;
@@ -29,6 +30,8 @@ function BookingDetail() {
   const { isDeleting, deleteBooking } = useDeleteBookings();
   
   if(isLoading) return <Spinner />
+  if(!booking) return <Empty resourceName='booking' />
+  
   const { status, id: bookingId } = booking;
   const statusToTagName = {
     unconfirmed: "blue",
